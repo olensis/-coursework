@@ -1,3 +1,7 @@
+import java.util.Arrays;
+import java.util.OptionalInt;
+import java.util.stream.IntStream;
+
 public class Main {
     public static void main(String[] args) {
         Employee[] empl = new Employee[10];
@@ -9,9 +13,14 @@ public class Main {
         for (Employee e: empl) {
             System.out.println(e);
         }
+        int salaryOfEmployee = empl[1].getSalary();
+        int salaryOfEmployee1 = empl [0].getSalary();
+        int salaryOfEmployee2 = empl [2].getSalary();
+        int salaryOfEmployee3 = empl [3].getSalary();
+        int salaryOfEmployee4 = empl [4].getSalary();
+        System.out.println(IntStream.of(salaryOfEmployee1+salaryOfEmployee2+salaryOfEmployee3+salaryOfEmployee4+salaryOfEmployee).sum());
 
-
-
-
+        Arrays.sort(empl);
     }
+
 }
