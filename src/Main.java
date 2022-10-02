@@ -1,10 +1,10 @@
-import java.util.Arrays;
-import java.util.OptionalInt;
+import java.util.*;
+import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
 public class Main {
     public static void main(String[] args) {
-        Employee[] empl = new Employee[10];
+        Employee[] empl = new Employee[5];
         empl[0] = new Employee("Иванов Иван Иванович", 1, 25000 );
         empl[1] = new Employee("Петров Петр Петрович", 2, 30000);
         empl[2] = new Employee("Сидоров Иван Петрович", 3, 35000);
@@ -20,7 +20,21 @@ public class Main {
         int salaryOfEmployee4 = empl [4].getSalary();
         System.out.println(IntStream.of(salaryOfEmployee1+salaryOfEmployee2+salaryOfEmployee3+salaryOfEmployee4+salaryOfEmployee).sum());
 
-        Arrays.sort(empl);
+        Arrays.sort(empl,Comparator.comparing(Employee::getSalary));
+       Employee maxSalary = empl[empl.length - 1];
+        System.out.println("Самая большая зп у " + maxSalary);
+
+        Arrays.sort(empl,Comparator.comparing(Employee::getSalary));
+        Employee minSalary = empl [0];
+        System.out.println(empl [0]);
+
+
+        }
+
+
+
+
+
     }
 
-}
+
