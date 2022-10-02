@@ -1,7 +1,9 @@
+import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.stream.IntStream;
 
 public class Employee {
+    public int[] getSalary;
     private String FIO;
     private int department;
     private static int salary;
@@ -36,13 +38,11 @@ public class Employee {
     public void SetDepartment(int department) { this.department = department; }
     public void SetSalary(int salary) { this.salary = salary; }
 
-
-
     public static void Employee () {
         int sum = IntStream.of(salary).sum();
-
-
+        System.out.println(IntStream.of(salary).sum());
         }
+
     }
 
 
