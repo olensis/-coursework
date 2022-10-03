@@ -6,7 +6,7 @@ public class Employee {
     public int[] getSalary;
     private String FIO;
     private int department;
-    private static int salary;
+    private  int salary;
     private static int Counter;
 
     private static AtomicInteger COUNTER = new AtomicInteger(1);
@@ -38,10 +38,7 @@ public class Employee {
     public void SetDepartment(int department) { this.department = department; }
     public void SetSalary(int salary) { this.salary = salary; }
 
-    public static void Employee () {
-        int sum = IntStream.of(salary).sum();
-        System.out.println(IntStream.of(salary).sum());
-        }
+
 
     }
 
