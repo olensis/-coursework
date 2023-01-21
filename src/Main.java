@@ -24,7 +24,7 @@ public class Main {
         int salaryOfEmployee2 = empl[2].getSalary();
         int salaryOfEmployee3 = empl[3].getSalary();
         int salaryOfEmployee4 = empl[4].getSalary();
-        int sum = salaryOfEmployee1+salaryOfEmployee2+salaryOfEmployee3+salaryOfEmployee4+salaryOfEmployee;
+        int sum = salaryOfEmployee1 + salaryOfEmployee2 + salaryOfEmployee3 + salaryOfEmployee4 + salaryOfEmployee;
         System.out.println("Сумма затрат в месяц " + sum);
 
         Arrays.sort(empl, Comparator.comparing(Employee::getSalary));
@@ -37,18 +37,15 @@ public class Main {
         double findSumWithoutUsingStream = sum / empl.length;
         System.out.println(" средняя зп" + findSumWithoutUsingStream);
 
-        String FIO= empl [0].getFIO();
-        String FIO1= empl [1].getFIO();
-        String FIO2= empl [2].getFIO();
-        String FIO3= empl [3].getFIO();
-        String FIO4= empl [4].getFIO();
-        System.out.println("ФИО сотрудников " + FIO1+ ","+ FIO+"," + FIO4+ "," + FIO2+ ","+ FIO3);
+        String FIO = empl[0].getFIO();
+        String FIO1 = empl[1].getFIO();
+        String FIO2 = empl[2].getFIO();
+        String FIO3 = empl[3].getFIO();
+        String FIO4 = empl[4].getFIO();
+        System.out.println("ФИО сотрудников " + FIO1 + "," + FIO + "," + FIO4 + "," + FIO2 + "," + FIO3);
     }
 
 
-
-
-
-    }
+}
 
 
